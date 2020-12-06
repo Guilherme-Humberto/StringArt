@@ -1,0 +1,16 @@
+.container {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    overflow-y: scroll;
+    height: 100%;
+    width: 40%;
+    background: #8ecae6;
+    box-shadow: 10px 0px 20px rgb(0, 0, 0, 0.9);
+}
+.container::-webkit-scrollbar {
+    background: transparent
+}

@@ -1,0 +1,29 @@
+.container {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border-bottom: 0.5px solid #36CED3;
+    height: 70px;
+    padding: 10px 30px;
+    width: 70%;
+}
+.containerNav {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+}
+.textLogo {
+    font-family: Caveat;
+    font-size: 30px;
+}
+.nav {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav:hover {
+    text-decoration: underline;
+}

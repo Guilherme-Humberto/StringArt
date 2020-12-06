@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
+    place-items: center;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.intro {
+    margin: 0;
+    font-size: 24px;
+    max-width: 750px;
+    font-family: IM Fell English SC;
+}
+.marc {
+    font-size: 90px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+}
+.containerIlustration {
+    background: red;
+    display: flex;
+    align-items: center;
+}
+.buttonWorks {
+    background: transparent;
+    border: 2px solid #36CED3;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    max-width: 200px;
+}
+.buttonWorks:hover {
+    background: #36CED3;
+    color: rgb(6, 69, 105);
+    cursor: pointer;
+}
