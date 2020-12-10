@@ -1,14 +1,15 @@
 .container {
     position: fixed;
+    z-index: 1;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
-    border-bottom: 0.5px solid #36CED3;
+    background: #131E20;
+    border: none;
     height: 70px;
-    padding: 10px 30px;
-    width: 70%;
+    padding: 10px 100px;
+    width: 100%;
 }
 .containerNav {
     display: flex;
@@ -17,7 +18,7 @@
 }
 .textLogo {
     font-family: Caveat;
-    font-size: 30px;
+    font-size: 40px;
 }
 .nav {
     font-size: 18px;
