@@ -1,33 +1,101 @@
-import { useState } from "react";
-import Image from 'next/image'
-import Works from "../../components/Modals/Works";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
+import Works from "../Works";
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
-  const [modal, setModal] = useState(false);
+  const router = useRouter();
+  const handleWorksPage = () => router.push("Works");
 
-  const handleOpenModalWorks = () => setModal(true);
   return (
-    <div className={styles.container}>
-      <NavBar />
-      <div className={styles.logo}>
-        <p className={styles.marc}>String Art</p>
-        <p className={styles.intro}>
-          String Art se trata de uma técnica de artesanato em que os pregos que
-          demarcam uma determinada superfície com o contorno da imagem desejada,
-          são preenchidos com linhas neutras ou coloridas.
-        </p>
-        <button className={styles.buttonWorks} onClick={handleOpenModalWorks}>
-          Conhecer Trabalhos
-        </button>
+    <motion.div exit={{ opacity: 0 }}>
+      <div className={styles.containerHome}>
+        <NavBar />
+        <div className={styles.logo}>
+          <div className={styles.marcContainer}>
+            <p className={styles.marcOne}>Nybelê</p>
+            <p className={styles.marcTwo}>String Art</p>
+          </div>
+          <p className={styles.intro}>
+            String Art se trata de uma técnica de artesanato em que os pregos
+            que demarcam uma determinada superfície com o contorno da imagem
+            desejada, são preenchidos com linhas neutras ou coloridas.
+          </p>
+          <button className={styles.buttonWorks} onClick={handleWorksPage}>
+            Conhecer Trabalhos
+          </button>
+        </div>
+        <div className={styles.imageHome}>
+          <Image
+            src="/assets/imgHome.png"
+            alt="Imagem"
+            height={300}
+            width={300}
+          />
+        </div>
       </div>
 
-      <div className="">
-        <Image src="/assets/imgHome.png" alt="" height={300} width={300}/>
+      <div className={styles.containerIntro}>
+        <div className={styles.containerTextsOne}>
+          <div className={styles.img}>
+            <Image
+              src="/assets/imgIdeas.png"
+              quality={100}
+              height={350}
+              width={350}
+            />
+          </div>
+          <div className={styles.textsOne}>
+            <p className={styles.titleOne}>Use sua Imaginação</p>
+            <p className={styles.descOne}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate explicabo nemo aspernatur commodi corrupti odio nostrum
+              quaerat, sapiente ea officiis!
+            </p>
+          </div>
+        </div>
+        <hr className={styles.linha} />
+        <div className={styles.containerTextsTwo}>
+          <div className={styles.textsTwo}>
+            <p className={styles.titleTwo}>Entrega</p>
+            <p className={styles.descTwo}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate explicabo nemo aspernatur commodi corrupti odio nostrum
+              quaerat, sapiente ea officiis!
+            </p>
+          </div>
+          <div className={styles.img}>
+            <Image src="/assets/imgDelivery.png" height={300} width={400} />
+          </div>
+        </div>
       </div>
 
-      {modal && <Works setModalWorks={setModal} />}
-    </div>
+      <div className={styles.containerDev}>
+        <div className={styles.imgDev}>
+        <Image
+          src="/assets/imgDev.png"
+          quality={100}
+          height={300}
+          width={300}
+        />
+        </div>
+        <div className={styles.textsDevContainer}>
+          <p className={styles.titleDev}>
+            Quer colocar sua ideia online ou transformar seu negócio?
+          </p>
+          <p className={styles.descDev}>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
+            neque optio nobis vitae facere eius repellat a possimus laborum
+            doloremque?
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.containerContact}>
+        <h1>Guilherme</h1>
+      </div>
+    </motion.div>
   );
 }
