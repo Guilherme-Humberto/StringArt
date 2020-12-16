@@ -5,16 +5,16 @@ export const Container = styled(motion.div)`
   position: fixed;
   z-index: 1;
   top: 0px;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #eee;
+  /* background-image: linear-gradient(90deg, #e9ecef, #ced4da); */
+  background: #f8f9fa;
   padding: 0 10%;
-  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.2);
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
 
   @media (max-width: 500px) {
     border-radius: 0px;

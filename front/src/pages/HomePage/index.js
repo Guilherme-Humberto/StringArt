@@ -1,8 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
 import NavBar from "../../components/NavBar";
-import About from "../../components/About";
-import Works from "../Works";
 // import styles from "./style.module.css";
 import { motion } from "framer-motion";
 import {
@@ -17,7 +15,6 @@ import {
 
 export default function HomePage() {
   const router = useRouter();
-  const handleWorksPage = () => router.push("Works");
 
   return (
     <>
@@ -38,7 +35,6 @@ export default function HomePage() {
           <Image src="/assets/imgHome.png" />
         </ContainerHome>
       </Container>
-      <About />
     </>
   );
 }
