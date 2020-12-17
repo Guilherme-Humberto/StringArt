@@ -14,6 +14,18 @@ export const ContainerIntroContact = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 500px) {
+    img {
+      height: 280px;
+    }
+    p:nth-child(2) {
+      font-size: 30px;
+    }
+    p:nth-child(3) {
+      font-size: 17px;
+    }
+  }
 `;
 export const Image = styled.img`
   height: 350px;
@@ -28,7 +40,6 @@ export const Title = styled.p`
   max-width: 570px;
 `;
 export const Desc = styled.p`
-  height: 350px;
   text-align: center;
   font-size: 20px;
   font-family: Noto Sans JP;
@@ -39,6 +50,7 @@ export const ListContacts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin: 10px 0;
 `;
 export const Contact = styled.div`
   display: flex;

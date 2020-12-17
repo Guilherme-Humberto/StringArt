@@ -3,21 +3,19 @@ import { motion } from 'framer-motion'
 
 export const Container = styled(motion.div)`
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0px;
-  /* max-width: 1100px; */
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-image: linear-gradient(90deg, #e9ecef, #ced4da); */
   background: #f8f9fa;
   padding: 0 10%;
-  /* border-radius: 0 0 10px 10px; */
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.1);
 
-  @media (max-width: 500px) {
-    border-radius: 0px;
+  @media (max-width: 620px) {
+    display: none;
   }
   @media (max-width: 400px) {
     height: auto;
@@ -65,3 +63,28 @@ export const Nav = styled.p`
     margin: 5px 0;
   }
 `;
+
+export const ContainerMobileNavBar = styled.div`
+  position: fixed;
+  z-index: 1;
+  background: #f8f9fa;
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.1);
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  display: none;
+
+  @media (max-width: 620px) {
+    display: flex;
+  }
+`
+
+export const TitleMobile = styled.p`
+  font-size: 30px;
+  font-family: Caveat;
+  font-weight: bold;
+`

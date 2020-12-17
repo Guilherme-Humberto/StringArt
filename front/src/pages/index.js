@@ -4,7 +4,7 @@ import About from "../components/About/index.js";
 import DevContent from "../components/Dev/index.js";
 import Footer from "../components/Footer/index.js";
 import Works from "../components/Works/index.js";
-import HomePage from "./HomePage/index.js";
+import HomePage from "../components/Home/index";
 
 export default function Home() {
   const [isFooterActive, setIsFooterAcitve] = useState(false)

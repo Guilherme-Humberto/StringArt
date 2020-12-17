@@ -1,21 +1,20 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  /* max-width: 1100px; */
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 1100px;
   margin: 100px auto;
 `;
 
 export const Card = styled.div`
   background: #f8f9fa;
   border: none;
-  max-width: 700px;
   width: 500px;
+  max-width: 700px;
   height: 300px;
   display: flex;
   align-items: center;
@@ -35,6 +34,10 @@ export const Texts = styled.div`
 
   @media (max-width: 500px) {
     max-width: 400px;
+  }
+
+  @media (max-width: 450px) {
+    margin: 5px 10px;
   }
 
   ${props => props.two && css`

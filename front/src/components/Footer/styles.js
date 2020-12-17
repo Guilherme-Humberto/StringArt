@@ -8,11 +8,26 @@ export const Container = styled(motion.div)`
   bottom: 0;
   z-index: 1;
   width: 100%;
-  height: 70px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 17px;
+    text-align: center;
+
+    p:nth-child(1) {
+      font-size: 14px;
+    }
+    button {
+      width: 100px;
+      font-size: 12px;
+    }
+  }
 `;
 
 export const Text = styled.p`
