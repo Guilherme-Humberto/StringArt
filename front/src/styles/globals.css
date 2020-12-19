@@ -6,7 +6,9 @@
 
 html,
 body {
-  background: #fff;
+  height: 100%;
+  width: 100%;
+  background: #eee;
   font-family: Noto Serif;
 }
 
@@ -14,8 +16,9 @@ body {
   --text-color: #333;
 }
 
-p, button {
-  color: var(--text-color)
+p, a, button {
+  color: var(--text-color);
+  font-family: Noto Sans JP;
 }
 
 a {

@@ -1,19 +1,13 @@
-import { Container, ContainerNav, Logo, Nav, ContainerMobileNavBar, TitleMobile } from "./styles";
+import styles from "./index.module.css";
 
 export default function NavBar() {
   return (
-    <>
-      <Container>
-        <Logo>Cilene Oliveira</Logo>
-        <ContainerNav>
-          <Nav>Informações</Nav>
-          <Nav>Trabalhos</Nav>
-          <Nav>Contate-nos</Nav>
-        </ContainerNav>
-      </Container>
-      <ContainerMobileNavBar>
-        <TitleMobile>Cilene Oliveira</TitleMobile>
-      </ContainerMobileNavBar>
-    </>
+    <div className={styles.containerNavBarTop}>
+      <p className={styles.logoNav}>Cilene Oliveira</p>
+      <div className={styles.containerNavBar}>
+        <a className={styles.nav} href="#infos">Informações</a>
+        <a className={styles.nav} href="#contact">Contatos</a>
+      </div>
+    </div>
   );
 }
